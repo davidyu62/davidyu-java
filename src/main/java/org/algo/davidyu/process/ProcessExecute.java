@@ -8,7 +8,8 @@ public class ProcessExecute {
         Process process = null;
         try {
 //            process = new ProcessBuilder("C:\\davidyu\\MyEXE.exe").start();
-            process = new ProcessBuilder("C:\\davidyu\\MyEXE.exe", "davidyu").start();                 // parameter
+            process = new ProcessBuilder("C:\\sp_workspace\\sp_java_test\\SUB2\\SP_TEST.bat").start();                 // parameter
+//            process = new ProcessBuilder("C:\\davidyu\\MyEXE.exe", "davidyu").start();                 // parameter
             br = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line = null;
             while(true){

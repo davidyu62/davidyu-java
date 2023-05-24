@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.Map;
 
 public class MyServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -24,6 +26,8 @@ public class MyServlet extends HttpServlet {
         String requestURI = req.getRequestURI();                                // request URI
         req.getHeader("");                                                // get Header
 
+        Map<String,String[]> map = req.getParameterMap();                       // request parameter
+        Iterator iter = map.keySet().iterator();
 
         // Response
         ResponseData responseData = new ResponseData("SUCCESS");

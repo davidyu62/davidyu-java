@@ -28,6 +28,7 @@ public class HttpClientHandler {
                     ResultData result = new ResultData();
                     result.setResult(text);
                     Request request = httpClient.newRequest("127.0.0.1:1234/output").method(HttpMethod.POST);
+//                    httpClient.newRequest(nextURL).header("x-requestId", xRequestId).method(HttpMethod.GET).send();   // to add header
                     request.header(HttpHeader.CONTENT_TYPE, "application/json");
                     request.content(new StringContentProvider(new Gson().toJson(result),"utf-8"));
                     ContentResponse res = request.send();
