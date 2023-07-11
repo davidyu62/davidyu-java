@@ -1,0 +1,21 @@
+{ "target": "http://127.0.0.1:5001/front", "status": "200",
+  "services": [
+    { "target": "http://127.0.0.1:8081/front", "status": "200",
+      "services": [
+        { "target": "http://127.0.0.1:5001/auth", "status": "200",
+          "services": [
+            { "target": "http://127.0.0.1:5002/auth", "status": "200",
+              "services": [
+                { "target": "http://127.0.0.1:8082/auth", "status": "200"
+                }]
+            }]
+        },
+        { "target": "http://127.0.0.1:5001/notice", "status": "200",
+          "services": [
+            { "target": "http://127.0.0.1:5003/notice", "status": "200",
+              "services": [
+                { "target": "http://127.0.0.1:8083/notice", "status": "200" }]
+            }]
+        }]
+    }]
+}

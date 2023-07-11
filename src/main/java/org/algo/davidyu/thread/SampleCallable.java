@@ -11,7 +11,7 @@ public class SampleCallable implements Callable {
 
     @Override
     public Result call() throws Exception {
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         Result result = new Result();
         result.setName(name);
         result.setResult(true);

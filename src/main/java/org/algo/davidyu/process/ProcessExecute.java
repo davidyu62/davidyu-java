@@ -6,6 +6,7 @@ public class ProcessExecute {
     public void executeProcessBuilderWithParameter(){
         BufferedReader br = null;
         Process process = null;
+        
         try {
 //            process = new ProcessBuilder("C:\\davidyu\\MyEXE.exe").start();
             process = new ProcessBuilder("C:\\sp_workspace\\sp_java_test\\SUB2\\SP_TEST.bat").start();                 // parameter

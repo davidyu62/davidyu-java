@@ -1,0 +1,41 @@
+{
+  "target": "127.0.0.1:5000/front",
+  "services": [
+    {
+      "target": "127.0.0.1:8081/front",
+      "services": [
+        {
+          "target": "127.0.0.1:5000/auth",
+          "services": [
+            {
+              "target": "127.0.0.1:5002/auth",
+              "services": [
+                {
+                  "target": "127.0.0.1:8082/auth"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "target": "127.0.0.1:5000/notice",
+          "services": [
+            {
+              "target": "127.0.0.1:5000/notice",
+              "services": [
+                {
+                  "target": "127.0.0.1:5003/notice",
+                  "services": [
+                    {
+                      "target": "127.0.0.1:8083/notice"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

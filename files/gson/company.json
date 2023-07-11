@@ -1,0 +1,8 @@
+{
+  "name": "lgcns",
+  "location": "seoul",
+  "employ": {
+    "number": "3",
+    "employee": ["davidyu", "mjkim"]
+  }
+}
