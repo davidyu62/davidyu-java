@@ -50,7 +50,7 @@ public class MapSort {
     }
 
     public static void main(String[] args){
-        new MapSort().hashMapSortByValueWithObject();
+        new MapSort().hashMapSortByValue();
     }
 }
 
